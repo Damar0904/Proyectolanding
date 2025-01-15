@@ -1,0 +1,666 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "PFRegal";
+  src: url("/font/PFRegalDisplayPro-Black.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PFRegal";
+  src: url("/font/PFRegalDisplayPro-Medium.ttf");
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PFRegal";
+  src: url("/font/PFRegalDisplayPro-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Brandon";
+  src: url("/font/Brandon_reg.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Brandon";
+  src: url("/font/Brandon_light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Brandon";
+  src: url("/font/Brandon_bld.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  background-color: white;
+  height: 345vh;
+  overflow-x: hidden;
+}
+
+#imgPrincipal {
+  width: 100%;
+  height: 750px;
+  background-image: url("/img/banner.png");
+  background-size: cover;
+  background-position: 50% 27%;
+  filter: brightness(0.5);
+  z-index: 1;
+}
+
+#titulos {
+  position: absolute;
+  top: 500px;
+  margin-left: 5vw;
+  color: white;
+  font-size: large;
+}
+#text-RealState {
+  font-size: 80px;
+  font-weight: normal;
+  font-family: "PFRegal";
+  line-height: 45px;
+}
+#titulos h2 {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "PFRegal";
+  line-height: 45px;
+  color: #b4b7b7;
+  margin-bottom: 30px;
+}
+
+.botones button {
+  background-color: transparent;
+  border-color: white;
+  border-radius: 50px;
+  margin-top: 40px;
+  display: inline-block;
+  padding: 15px 70px;
+  color: white;
+  border: solid 1px white;
+  font-size: 16px;
+  font-family: Arial;
+}
+#boton1 {
+  position: absolute;
+  top: 600px;
+  margin-top: 60px;
+  margin-left: 5vw;
+  padding: 15px 140px;
+}
+#boton2 {
+  position: absolute;
+  top: 100px;
+  right: 16vh;
+  margin-left: 5vw;
+  width: 400px;
+  padding: 10px 20px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#boton2 .villatext {
+  flex-grow: 1;
+  text-align: left;
+}
+#boton2 .villaimg {
+  width: 16px;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+#redes {
+  grid-template-columns: 1fr;
+  width: 45px;
+  justify-items: center;
+  position: fixed;
+  top: 200px;
+}
+#redes img {
+  display: block;
+  width: 10px;
+  margin-top: 10px;
+}
+#redes p {
+  font-family: "Brandon";
+  font-weight: bold;
+  font-size: 14px;
+  transform: rotate(90deg);
+  display: inline-block;
+  padding-right: 50px;
+  color: #7e7e7e;
+}
+#rayita {
+  margin-top: 18px;
+  height: 40px;
+  width: 1px;
+  border-left: 2px solid #7e7e7e;
+}
+
+.contCuadro {
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr 1fr 5fr;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 80vh;
+  width: 100%;
+}
+.cuadradito {
+  height: 5px;
+  width: 31.5px;
+  background-color: gray;
+  margin: 14px auto;
+}
+.pregaleria {
+  top: auto;
+  left: 50%;
+}
+
+.seccion-properties-forsale {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#galeria1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin-top: 50px;
+}
+.propiedades {
+  height: 400px;
+}
+.mediafoto,
+.englandglasgow,
+.fransemarseilles {
+  position: relative;
+}
+.paisciudad {
+  position: absolute;
+  top: 300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: black;
+  padding: 10px;
+}
+.paisciudad h3 {
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.paisciudad h4 {
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: 400;
+}
+#text-France {
+  color: black;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+#text-Marseilles {
+  color: black;
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: 400;
+}
+.paisciudad-green {
+  background-color: rgba(0, 68, 0, 0.144);
+  color: white;
+}
+.paisciudad-red {
+  background-color: rgb(255, 255, 255);
+  color: white;
+}
+.paisciudad:hover {
+  background-color: rgba(0, 0, 0, 0.307);
+  color: white;
+}
+
+#world {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: right;
+  margin-top: 10vh;
+  margin-left: 10vh;
+  padding-right: 60px;
+}
+#world h1 {
+  color: #df991b;
+  font-weight: normal;
+  font-size: 30px;
+}
+#world h2 {
+  color: #000;
+  font-weight: normal;
+  font-size: 60px;
+}
+
+.buttonNavClass {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 100px;
+}
+#preButton {
+  background-color: transparent;
+  color: black;
+  border: 0;
+  margin-bottom: 45px;
+}
+#nextButton {
+  background-color: transparent;
+  color: #df991b;
+  border: 0;
+  margin-bottom: 45px;
+}
+#viewButton {
+  background-color: transparent;
+  border-radius: 50px;
+  display: inline-block;
+  border: solid 1px white;
+  font-size: 16px;
+  font-family: Arial;
+  padding: 10px 100px;
+  border-color: black;
+  color: black;
+}
+
+.developments #Luxuryproperties h1 {
+  font-size: 60px;
+  font-weight: 4;
+  font-family: "PFRegal";
+  line-height: 45px;
+  color: #000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.developments #Luxuryproperties h2 {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "PFRegal";
+  line-height: 45px;
+  color: #df991b;
+  padding-top: 30px;
+  text-align: center;
+}
+#propertiesdevelopments * {
+  padding: 0;
+  margin: 0;
+}
+#propertiesdevelopments {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px 10px;
+  margin-top: 50px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-bottom: 100px;
+}
+#propertiesdevelopments img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  clip-path: inset(0% 0 40% 0);
+  margin-bottom: -110px;
+}
+#propertiesdevelopments h5,
+#propertiesdevelopments h4 {
+  margin-left: 20px;
+  font-size: 20px;
+}
+#propertiesdevelopments h5 {
+  margin-left: 20px;
+  font-size: 15px;
+  color: #464547;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0);
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+}
+#logo {
+  margin-left: 100px;
+}
+#logo-mobile {
+  display: none;
+  border: solid 1px white;
+  border-radius: 50%;
+  padding: 20px;
+}
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+.idiomas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+.idiomas img {
+  margin-right: 40px;
+  margin-left: 10px;
+  width: 30px;
+}
+.links a {
+  font-family: "Brandon";
+  text-decoration: none;
+  color: white;
+}
+.grey {
+  color: rgba(255, 255, 255, 0.5);
+}
+.registro {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+}
+.registro a {
+  justify-self: center;
+}
+#bar {
+  height: 100%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.section-viewAll{
+  display: none;
+}
+
+footer {
+  height: 400px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  margin-top: 100px;
+}
+#footernegrito {
+  color: white;
+  display: grid;
+  width: 90%;
+  margin: auto;
+  gap: 20px;
+}
+.enlacesf {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.enlacesf .primera {
+  font-family: "Brandon";
+  font-size: 18px;
+  color: #b4b7b7;
+  justify-self: center;
+}
+.enlacesf .medio {
+  font-family: "Brandon";
+  font-size: 18px;
+  color: #b4b7b7;
+  justify-self: center;
+}
+.enlacesf .ultima {
+  font-family: "PFRegal";
+  font-size: 18px;
+  color: #b4b7b7;
+  text-align: right;
+  line-height: 40px;
+}
+.enlacesf ul li {
+  list-style: none;
+}
+.copy {
+  border-top: solid 2px white;
+}
+.copy p {
+  font-family: "Brandon";
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 20px;
+  text-align: center;
+}
+.footergris {
+  background-color: #26282b;
+  width: 90%;
+  height: 50%;
+  margin: auto;
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.footergrisdos {
+  display: grid;
+  padding: 0px 80px;
+  gap: 10px;
+  font-family: "Brandon";
+}
+.footergrisdos input {
+  background-color: transparent;
+  border: solid 1px #7e7e7e;
+  border-radius: 24px;
+  padding: 10px 20px;
+}
+.footergrisdos button {
+  background-color: transparent;
+  border: solid 1px orange;
+  color: orange;
+  border-radius: 24px;
+  padding: 10px 20px;
+  font-size: 20px;
+  width: 60%;
+  justify-self: end;
+}
+.footergrisdos p {
+  margin-left: 20px;
+  color: white;
+  font-size: 20px;
+}
+#titulofooter {
+  font-size: 40px;
+  color: white;
+  padding-left: 80px;
+}
+#titulofooter span {
+  color: orange;
+  font-size: 25px;
+}
+#hiddenGaleriaMobile {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  nav #logo {
+    display: none;
+  }
+  nav #logo-mobile {
+    display: inline;
+    margin-left: 30px;
+  }
+  .links {
+    grid-template-columns: 1fr;
+  }
+  .idiomas {
+    grid-template-columns: 1fr;
+    justify-items: end;
+  }
+  .idiomas a {
+    display: none;
+  }
+  .registro {
+    display: none;
+  }
+  .developments #propertiesdevelopments {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #redes {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .seccion-properties-forsale {
+    grid-template-columns: 1fr;
+  }
+  #galeria1 {
+    overflow-y: visible;
+    margin: 20px;
+    height: auto;
+  }
+  .developments #propertiesdevelopments {
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 0px;
+  }
+  #propertiesdevelopments h4, #propertiesdevelopments h5 {
+    margin-left: 0px;
+    display: none;
+  }
+
+  #textLuxuryproperties {
+    display: none;
+  }
+  #textWorldwidegallery {
+    display: block!important;
+    text-align: left!important;
+    padding-bottom: 10px;
+  }
+  #textDevelopments {
+    text-align: left!important;
+    padding-left: 0px;
+    margin-bottom: -30px!important;
+  }
+
+  .footergris {
+    display: none;
+  }
+  .footergrisdos {
+    display: none;
+  }
+  #world {
+    display: none;
+  }
+  .section-viewAll{
+    display: block;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 0px;
+  } #text-viewAll{
+    font-family: "Brandon"; 
+    font-weight: 300;
+    font-size: 20px;
+    color: #df991b;
+    padding-left: 14px;
+  }
+  .contCuadro {
+    top: 90vh;
+  }
+  #propertiesdevelopments {
+    display: none!important;
+  }
+  #hiddenGaleriaMobile {
+    display: block;
+    grid-template-columns: 1fr;
+    padding-top: 70px;
+    padding-bottom: 0px;
+    gap: 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  #redes {
+    display: none;
+  }
+  #boton1 {
+    display: none;
+  }
+  #propertiesdevelopments {
+    display: none;
+  }
+  .contCuadro {
+    display: none;
+  }
+  #boton2 {
+    width: 100px;
+    font-size: 8px;
+    img {
+      width: 10px;
+    }
+  }
+  footer {
+    height: 410px;
+  }
+
+  footer .copy {
+    display: none;
+  }
+
+  #footernegrito .enlacesf {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  #footernegrito .enlacesf::before {
+    content: "Canada";
+    color: white;
+    font-family: "PFRegal";
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  #footernegrito .primera {
+    text-align: left;
+    margin-left: 10px;
+    color: white;
+  }
+  #footernegrito .medio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #footernegrito .ultima {
+    text-align: left;
+    margin-left: 10px;
+  }
+  #text-CallCenter {
+    display: none;
+  }
+  .seccion-properties-forsale {
+    grid-template-columns: 1fr;
+  }
+  #galeria1 {
+    grid-template-columns: 1fr;
+
+    overflow-y: visible;
+    height: auto;
+    .mediafoto {
+      display: none;
+    }
+  }
+}
